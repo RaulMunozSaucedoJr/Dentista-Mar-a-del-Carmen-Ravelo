@@ -1,0 +1,679 @@
+:root {
+    --Color-1: #2C2D32;
+    --Color-2: #103879;
+    --Color-3: #93bdc3;
+    --Color-4: #F1F2F1;
+
+    --Titulos: 'Poppins', sans-serif;
+    --Subtitulos: 'Oswald', sans-serif;
+    --General: 'Roboto', sans-serif;
+
+    --Extra-Grande: 10em;
+    --Grande: 8em;
+    --Mediana: 6em;
+    --Chica: 2em;
+    --Extra-Chica: 1.5em;
+    --Doble-Extra-chica: .5em;
+
+    --Border-General: var(--Color-2) solid .2em;
+
+    --Margin-General: 2em;
+    --Pading-General: 2em;
+}
+
+$duracion_animacion: 2s;
+$tipo_animacion: ease-in;
+$iteracion_animacion: 1;
+$modo_animacion: forwards;
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    list-style-type: none;
+}
+
+::-webkit-scrollbar,
+::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-thumb:hover,
+::-webkit-scrollbar-track {
+    display: none;
+}
+
+::selection {
+    background-color: var(--Color-3);
+}
+
+::-moz-selection {
+    background-color: var(--Color-3);
+}
+
+a,
+a:link,
+a:visited,
+a:active {
+    text-decoration: none;
+    color: var(--Color-1);
+}
+
+
+html,
+body {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: var(--Color-4);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(/Assets/img/Header_Imagen.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    place-content: center;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+
+    .overlay {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+
+        h1 {
+            display: inline-block;
+            position: relative;
+            animation: fade $duracion_animacion $tipo_animacion $iteracion_animacion $modo_animacion;
+            font-family: var(--Subtitulos);
+            font-size: var(--Mediana);
+            font-weight: bolder;
+            overflow-wrap: break-word;
+            text-align: center;
+
+
+            &::after {
+                content: '';
+                background: var(--Color-2);
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                animation: swipe $duracion_animacion $tipo_animacion $iteracion_animacion $modo_animacion;
+                transform-origin: left 50%;
+            }
+
+            @keyframes swipe {
+                0% {
+                    transform: scaleX(0);
+                }
+
+                50% {
+                    transform: scaleX(1);
+                    transform-origin: left 50%;
+                }
+
+                50.001% {
+                    transform: scaleX(1);
+                    transform-origin: right 50%;
+                }
+
+                100% {
+                    transform: scaleX(0);
+                    transform-origin: right 50%;
+                }
+            }
+
+            @keyframes fade {
+                0% {
+                    color: transparent;
+                }
+
+                50% {
+                    color: transparent;
+                }
+
+                50.001% {
+                    color: var(--Color-2);
+                }
+
+                60% {
+                    color: var(--Color-2);
+                }
+
+                80% {
+                    color: var(--Color-2);
+                }
+
+                100% {
+                    color: var(--Color-2);
+                }
+            }
+
+        }
+    }
+}
+
+nav {
+    width: 100%;
+    height: auto;
+    background-color: var(--Color-4);
+    border: var(--Border-General);
+    border-left: transparent;
+    border-right: transparent;
+    margin: 0;
+    padding: 0;
+
+    img {
+        width: 10%;
+        height: auto;
+        object-fit: contain;
+        pointer-events: none;
+        border-radius: 0;
+        border: transparent;
+    }
+
+    ul {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+
+        li {
+            border: var(--Color-2) solid .1em;
+            border-top: transparent;
+            border-bottom: transparent;
+            text-align: center;
+            padding: 0 2.5em 0 2.5em;
+
+            &.Nosotros:not(.Tratamientos) {
+                border-right: transparent;
+            }
+
+            &.Tratamientos:not(.Testimonios) {
+                border-right: transparent;
+            }
+
+            &.Testimonios:not(.Contacto) {
+                border-right: transparent;
+            }
+
+            &.Contacto:not(.Testimonios) {
+                border-right: transparent;
+            }
+
+            &.Reconocimientos:not(.Contacto) {
+                border-right: transparent;
+            }
+
+            a {
+                font-family: var(--Subtitulos);
+                color: var(--Color-2);
+                font-weight: lighter;
+                text-decoration: none;
+                font-size: var(--Extra-Chica);
+            }
+        }
+    }
+
+    @media only screen and (max-width:37.5em) {
+
+        ul,
+        li,
+        button.navbar-toggler,
+        .collapse {
+            display: none;
+            visibility: hidden;
+        }
+    }
+}
+
+section {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    max-width: none;
+    background-color: transparent;
+    overflow-x: hidden;
+
+    .Nosotros {
+        overflow-x: hidden;
+
+        &_Superior_Izquierdo {
+            background-image: url(/Assets/img/Nosotros_Izquierdo_Imagen.jpg);
+            background-position: center;
+            background-repeat: repeat;
+            background-size: cover;
+            border: var(--Border-General);
+            border-top: transparent;
+        }
+
+        &_Superior_Derecho {
+            padding: 1em;
+            background-color: var(--Color-2);
+            overflow: hidden;
+
+            h1 {
+                font-family: var(--Titulos);
+                font-size: var(--Chica);
+                font-weight: bolder;
+                color: var(--Color-4);
+            }
+        }
+
+        &_Izquierdo {
+
+            background-color: var(--Color-4);
+            overflow: hidden;
+            border: var(--Border-General);
+            border-top: transparent;
+
+            h1 {
+                padding: .5em;
+                font-family: var(--Titulos);
+                font-size: var(--Chica);
+                color: var(--Color-2);
+                text-align: left;
+
+                &:hover {
+                    transition: 1.5s;
+                    text-decoration: underline;
+                    color: var(--Color-3);
+                }
+            }
+
+            p {
+                padding: 1em;
+                font-family: var(--General);
+                font-size: var(--Extra-Chica);
+                text-align: left;
+                font-weight: lighter;
+                line-height: 1.5;
+                letter-spacing: .1em;
+
+                strong {
+                    font-family: var(--Titulos);
+                    text-decoration: underline;
+                    font-weight: bolder;
+                    color: var(--Color-2);
+
+                    &:hover {
+                        transition: 1s;
+                        color: var(--Color-3);
+                    }
+                }
+            }
+        }
+
+        &_Derecho {
+            overflow: hidden;
+            border: var(--Border-General);
+            border-top: transparent;
+            border-left: transparent;
+            background-image: url(/Assets/img/Nosotros_Imagen.jpg);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+    }
+
+    .Servicios {
+        overflow-x: hidden;
+        border-right: transparent;
+
+        &_1 {
+            background-color: var(--Color-2);
+            border: var(--Border-General);
+            border-top: transparent;
+
+            h1 {
+                font-family: var(--Titulos);
+                font-size: 3.5em;
+                color: var(--Color-4);
+                font-weight: bolder;
+                padding: .2em;
+
+            }
+        }
+
+        &_2,
+        &_3,
+        &_4 {
+            background-color: var(--Color-4);
+            border: var(--Border-General);
+            border-top: transparent;
+
+            h1 {
+                font-family: var(--Titulos);
+                font-size: var(--Chica);
+                color: var(--Color-3);
+                font-weight: bolder;
+                padding: 1em;
+                writing-mode: vertical-rl;
+                transform: rotate(-90deg);
+                text-align: center;
+
+                &:hover {
+                    transition: 1.5s;
+                    color: var(--Color-2);
+                    text-decoration: underline;
+                }
+            }
+
+
+            &:not(.Servicios_1) {
+                border-left: transparent;
+            }
+
+            &:not(.Servicios_2) {
+                border-left: transparent;
+            }
+
+            &:not(.Servicios_3) {
+                border-left: transparent;
+            }
+        }
+
+    }
+
+    .Testimonios {
+        overflow-x: hidden;
+        padding-bottom: 2em;
+
+        &_Izquierdo {
+            padding: 2em;
+            border: var(--Border-General);
+            border-top: transparent;
+
+            .card {
+                border-radius: 0;
+
+                &-body {
+                    width: 100%;
+                    height: 100%;
+                    background-color: var(--Color-4);
+                    border: var(--Color-1) solid .2em;
+                }
+
+                &-title {
+                    font-family: var(--Titulos);
+                    font-size: var(--Extra-Chica);
+                    color: var(--Color-3);
+                    font-weight: bold;
+                    text-align: center;
+
+                    &:hover {
+                        transition: 1s;
+                        color: var(--Color-2);
+                    }
+                }
+
+                &-text {
+                    font-family: var(--General);
+                    color: var(--Color-1);
+                    font-size: var(--Extra-Chica);
+                    text-align: left;
+                }
+            }
+
+            img {
+                width: 100%;
+                height: 50%;
+                object-fit: cover;
+                pointer-events: none;
+                border-radius: 0;
+            }
+
+        }
+
+        &_Derecho {
+            background-color: var(--Color-2);
+
+            h1 {
+                font-family: var(--Titulos);
+                font-size: var(--Mediana);
+                color: var(--Color-4);
+                font-weight: bolder;
+                padding: .5em;
+                writing-mode: vertical-lr;
+                transform: rotate(-180deg);
+
+            }
+        }
+    }
+
+    .Contacto {
+        overflow-x: hidden;
+
+        &_1 {
+            background-color: var(--Color-2);
+
+            h1 {
+                font-family: var(--Titulos);
+                font-size: var(--Chica);
+                color: var(--Color-4);
+                letter-spacing: .2em;
+            }
+        }
+
+        &_2,
+        &_3,
+        &_4 {
+            background-color: var(--Color-4);
+            border: var(--Border-General);
+            padding: 2em;
+
+            a {
+                font-family: var(--Subtitulos);
+                font-size: var(--Extra-Chica);
+                color: var(--Color-2);
+                text-align: center;
+                text-decoration: none;
+
+                i {
+                    font-size: var(--Chica);
+                }
+            }
+
+            &:not(.Contacto_2) {
+                border-top: transparent;
+                border-left: transparent;
+            }
+
+            &:not(.Contacto_3) {
+                border-top: transparent;
+                border-left: transparent;
+            }
+
+            &:not(.Contacto_4) {
+                border-top: transparent;
+                border-left: transparent;
+            }
+        }
+
+    }
+}
+
+
+footer {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    place-content: center;
+    background-color: var(--Color-2);
+    overflow-x: hidden;
+
+    .Footer {
+
+        overflow-x: hidden;
+
+        &_Inferior {
+            font-family: var(--Subtitulos);
+            font-size: 1em;
+            text-align: center;
+            padding: 1em;
+
+            &_Link {
+                font-size: 1em;
+                color: var(--Color-4);
+            }
+
+        }
+    }
+
+
+
+
+}
+
+.Redes_Sociales {
+    width: calc(100%-66.6%);
+    position: fixed;
+    top: 62.7%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    right: 0;
+    z-index: 4;
+    background-color: var(--Color-4);
+
+    a {
+        display: block;
+        text-align: center;
+        padding: .5em;
+        transition: all 0.3s ease;
+        color: var(--Color-2);
+        font-size: var(--Extra-Chica);
+        display: grid;
+        place-content: center;
+
+        &:hover {
+            color: var(--Color-3);
+        }
+
+        &.Redes_Sociales_Programador {
+            font-family: var(--Titulos);
+            font-size: var(--Doble-Extra-chica);
+            writing-mode: vertical-rl;
+            transform: rotate(-180deg);
+        }
+    }
+
+}
+
+.percent {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    background: var(--Color-3);
+    height: 140px;
+    width: 1px;
+    margin: -60px 0 0 40px;
+    z-index: 10;
+
+    .fill {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--Color-4);
+        transition: background 0.15s ease;
+        z-index: 10;
+    }
+}
+
+.mb-nav {
+    display: none;
+}
+
+@media screen and (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
+@media only screen and (max-width: 37.5rem) {
+
+    .percent {
+        display: none;
+        visibility: hidden;
+    }
+
+    .Redes_Sociales {
+        top: 70%;
+    }
+
+    .mb-nav {
+        position: fixed;
+        top: 4;
+        bottom: 0;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--Color-4);
+        z-index: 99;
+        overflow: hidden;
+        border-radius: 0;
+        border: var(--Border-General);
+        border-left: transparent;
+        border-right: transparent;
+        border-bottom: transparent;
+    }
+
+    .mb-nav-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 25%;
+        padding: 1rem 0;
+    }
+
+    .mb-nav-item i,
+    .mb-nav-item a {
+        font-size: 1.3em;
+        color: var(--Color-2);
+        z-index: 2;
+        transition: .5s ease-in-out;
+    }
+
+    .mb-move-item {
+        position: absolute;
+        left: 0;
+        width: auto;
+        height: 100%;
+        background-color: var(--Color-2);
+        transition: .5s ease-in-out;
+    }
+
+    .card-text {
+        font-size: var(--Doble-Extra-chica);
+    }
+}
+
+.Posicion-Overflow {
+    overflow-x: hidden;
+    display: grid;
+    place-content: center;
+}
