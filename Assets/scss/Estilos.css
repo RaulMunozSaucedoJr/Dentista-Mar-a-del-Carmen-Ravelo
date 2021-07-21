@@ -1,1 +1,542 @@
-:root{--Color-1:#2C2D32;--Color-2:#103879;--Color-3:#93bdc3;--Color-4:#F1F2F1;--Titulos:"Poppins",sans-serif;--Subtitulos:"Oswald",sans-serif;--General:"Roboto",sans-serif;--Extra-Grande:10em;--Grande:8em;--Mediana:6em;--Chica:2em;--Extra-Chica:1.5em;--Doble-Extra-chica:.5em;--Border-General:var(--Color-2) solid .2em;--Margin-General:2em;--Pading-General:2em}*,::after,::before{box-sizing:border-box;margin:0;padding:0;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;list-style-type:none}::-webkit-scrollbar,::-webkit-scrollbar-thumb,::-webkit-scrollbar-thumb:hover,::-webkit-scrollbar-track{display:none}::-moz-selection{background-color:var(--Color-3)}::selection{background-color:var(--Color-3)}::-moz-selection{background-color:var(--Color-3)}a,a:active,a:link,a:visited{text-decoration:none;color:var(--Color-1)}body,html{scroll-behavior:smooth}body{width:100%;height:100%;background-color:var(--Color-4);margin:0;padding:0;overflow-x:hidden}header{width:100%;height:100vh;background-image:url(/Assets/img/Header_Imagen.jpg);background-position:center;background-repeat:no-repeat;background-size:cover;display:grid;place-content:center;margin:0;padding:0;overflow-x:hidden}header .overlay{width:100%;height:100%;margin:0;padding:0;overflow:hidden}header .overlay h1{display:inline-block;position:relative;-webkit-animation:fade 2s ease-in 1 forwards;animation:fade 2s ease-in 1 forwards;font-family:var(--Subtitulos);font-size:var(--Mediana);font-weight:bolder;overflow-wrap:break-word;text-align:center}header .overlay h1::after{content:"";background:var(--Color-2);position:absolute;top:0;bottom:0;left:0;right:0;-webkit-animation:swipe 2s ease-in 1 forwards;animation:swipe 2s ease-in 1 forwards;transform-origin:left 50%}@-webkit-keyframes swipe{0%{transform:scaleX(0)}50%{transform:scaleX(1);transform-origin:left 50%}50.001%{transform:scaleX(1);transform-origin:right 50%}100%{transform:scaleX(0);transform-origin:right 50%}}@keyframes swipe{0%{transform:scaleX(0)}50%{transform:scaleX(1);transform-origin:left 50%}50.001%{transform:scaleX(1);transform-origin:right 50%}100%{transform:scaleX(0);transform-origin:right 50%}}@-webkit-keyframes fade{0%{color:transparent}50%{color:transparent}50.001%{color:var(--Color-2)}60%{color:var(--Color-2)}80%{color:var(--Color-2)}100%{color:var(--Color-2)}}@keyframes fade{0%{color:transparent}50%{color:transparent}50.001%{color:var(--Color-2)}60%{color:var(--Color-2)}80%{color:var(--Color-2)}100%{color:var(--Color-2)}}nav{width:100%;height:auto;background-color:var(--Color-4);border:var(--Border-General);border-left:transparent;border-right:transparent;margin:0;padding:0}nav img{width:10%;height:auto;-o-object-fit:contain;object-fit:contain;pointer-events:none;border-radius:0;border:transparent}nav ul{width:100%;height:auto;margin:0;padding:0}nav ul li{border:var(--Color-2) solid .1em;border-top:transparent;border-bottom:transparent;text-align:center;padding:0 2.5em 0 2.5em}nav ul li.Nosotros:not(.Tratamientos){border-right:transparent}nav ul li.Tratamientos:not(.Testimonios){border-right:transparent}nav ul li.Testimonios:not(.Contacto){border-right:transparent}nav ul li.Contacto:not(.Testimonios){border-right:transparent}nav ul li.Reconocimientos:not(.Contacto){border-right:transparent}nav ul li a{font-family:var(--Subtitulos);color:var(--Color-2);font-weight:lighter;text-decoration:none;font-size:var(--Extra-Chica)}@media only screen and (max-width:37.5em){nav .collapse,nav button.navbar-toggler,nav li,nav ul{display:none;visibility:hidden}}section{width:100%;height:100%;margin:0;padding:0;display:grid;max-width:none;background-color:transparent;overflow-x:hidden}section .Nosotros{overflow-x:hidden}section .Nosotros_Superior_Izquierdo{background-image:url(/Assets/img/Nosotros_Izquierdo_Imagen.jpg);background-position:center;background-repeat:repeat;background-size:cover;border:var(--Border-General);border-top:transparent}section .Nosotros_Superior_Derecho{padding:1em;background-color:var(--Color-2);overflow:hidden}section .Nosotros_Superior_Derecho h1{font-family:var(--Titulos);font-size:var(--Chica);font-weight:bolder;color:var(--Color-4)}section .Nosotros_Izquierdo{background-color:var(--Color-4);overflow:hidden;border:var(--Border-General);border-top:transparent}section .Nosotros_Izquierdo h1{padding:.5em;font-family:var(--Titulos);font-size:var(--Chica);color:var(--Color-2);text-align:left}section .Nosotros_Izquierdo h1:hover{transition:1.5s;text-decoration:underline;color:var(--Color-3)}section .Nosotros_Izquierdo p{padding:1em;font-family:var(--General);font-size:var(--Extra-Chica);text-align:left;font-weight:lighter;line-height:1.5;letter-spacing:.1em}section .Nosotros_Izquierdo p strong{font-family:var(--Titulos);text-decoration:underline;font-weight:bolder;color:var(--Color-2)}section .Nosotros_Izquierdo p strong:hover{transition:1s;color:var(--Color-3)}section .Nosotros_Derecho{overflow:hidden;border:var(--Border-General);border-top:transparent;border-left:transparent;background-image:url(/Assets/img/Nosotros_Imagen.jpg);background-position:center center;background-repeat:no-repeat;background-size:cover}section .Servicios{overflow-x:hidden;border-right:transparent}section .Servicios_1{background-color:var(--Color-2);border:var(--Border-General);border-top:transparent}section .Servicios_1 h1{font-family:var(--Titulos);font-size:3.5em;color:var(--Color-4);font-weight:bolder;padding:.2em}section .Servicios_2,section .Servicios_3,section .Servicios_4{background-color:var(--Color-4);border:var(--Border-General);border-top:transparent}section .Servicios_2 h1,section .Servicios_3 h1,section .Servicios_4 h1{font-family:var(--Titulos);font-size:var(--Chica);color:var(--Color-3);font-weight:bolder;padding:1em;-ms-writing-mode:tb-rl;writing-mode:vertical-rl;transform:rotate(-90deg);text-align:center}section .Servicios_2 h1:hover,section .Servicios_3 h1:hover,section .Servicios_4 h1:hover{transition:1.5s;color:var(--Color-2);text-decoration:underline}section .Servicios_2:not(.Servicios_1),section .Servicios_3:not(.Servicios_1),section .Servicios_4:not(.Servicios_1){border-left:transparent}section .Servicios_2:not(.Servicios_2),section .Servicios_3:not(.Servicios_2),section .Servicios_4:not(.Servicios_2){border-left:transparent}section .Servicios_2:not(.Servicios_3),section .Servicios_3:not(.Servicios_3),section .Servicios_4:not(.Servicios_3){border-left:transparent}section .Testimonios{overflow-x:hidden;padding-bottom:2em}section .Testimonios_Izquierdo{padding:2em;border:var(--Border-General);border-top:transparent}section .Testimonios_Izquierdo .card{border-radius:0}section .Testimonios_Izquierdo .card-body{width:100%;height:100%;background-color:var(--Color-4);border:var(--Color-1) solid .2em}section .Testimonios_Izquierdo .card-title{font-family:var(--Titulos);font-size:var(--Extra-Chica);color:var(--Color-3);font-weight:700;text-align:center}section .Testimonios_Izquierdo .card-title:hover{transition:1s;color:var(--Color-2)}section .Testimonios_Izquierdo .card-text{font-family:var(--General);color:var(--Color-1);font-size:var(--Extra-Chica);text-align:left}section .Testimonios_Izquierdo img{width:100%;height:50%;-o-object-fit:cover;object-fit:cover;pointer-events:none;border-radius:0}section .Testimonios_Derecho{background-color:var(--Color-2)}section .Testimonios_Derecho h1{font-family:var(--Titulos);font-size:var(--Mediana);color:var(--Color-4);font-weight:bolder;padding:.5em;-ms-writing-mode:tb-lr;writing-mode:vertical-lr;transform:rotate(-180deg)}section .Contacto{overflow-x:hidden}section .Contacto_1{background-color:var(--Color-2)}section .Contacto_1 h1{font-family:var(--Titulos);font-size:var(--Chica);color:var(--Color-4);letter-spacing:.2em}section .Contacto_2,section .Contacto_3,section .Contacto_4{background-color:var(--Color-4);border:var(--Border-General);padding:2em}section .Contacto_2 a,section .Contacto_3 a,section .Contacto_4 a{font-family:var(--Subtitulos);font-size:var(--Extra-Chica);color:var(--Color-2);text-align:center;text-decoration:none}section .Contacto_2 a i,section .Contacto_3 a i,section .Contacto_4 a i{font-size:var(--Chica)}section .Contacto_2:not(.Contacto_2),section .Contacto_3:not(.Contacto_2),section .Contacto_4:not(.Contacto_2){border-top:transparent;border-left:transparent}section .Contacto_2:not(.Contacto_3),section .Contacto_3:not(.Contacto_3),section .Contacto_4:not(.Contacto_3){border-top:transparent;border-left:transparent}section .Contacto_2:not(.Contacto_4),section .Contacto_3:not(.Contacto_4),section .Contacto_4:not(.Contacto_4){border-top:transparent;border-left:transparent}footer{width:100%;height:auto;margin:0;padding:0;display:grid;place-content:center;background-color:var(--Color-2);overflow-x:hidden}footer .Footer{overflow-x:hidden}footer .Footer_Inferior{font-family:var(--Subtitulos);font-size:1em;text-align:center;padding:1em}footer .Footer_Inferior_Link{font-size:1em;color:var(--Color-4)}.Redes_Sociales{width:calc(100%-66.6%);position:fixed;top:62.7%;transform:translateY(-50%);right:0;z-index:4;background-color:var(--Color-4)}.Redes_Sociales a{display:block;text-align:center;padding:.5em;transition:all .3s ease;color:var(--Color-2);font-size:var(--Extra-Chica);display:grid;place-content:center}.Redes_Sociales a:hover{color:var(--Color-3)}.Redes_Sociales a.Redes_Sociales_Programador{font-family:var(--Titulos);font-size:var(--Doble-Extra-chica);-ms-writing-mode:tb-rl;writing-mode:vertical-rl;transform:rotate(-180deg)}.percent{position:fixed;display:flex;flex-direction:column;background:var(--Color-3);height:140px;width:1px;margin:-60px 0 0 40px;z-index:10}.percent .fill{position:absolute;bottom:0;width:100%;height:100%;background:var(--Color-4);transition:background .15s ease;z-index:10}.mb-nav{display:none}@media screen and (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}@media only screen and (max-width:37.5rem){.percent{display:none;visibility:hidden}.Redes_Sociales{top:70%}.mb-nav{position:fixed;top:4;bottom:0;display:flex;width:100%;justify-content:space-between;align-items:center;background-color:var(--Color-4);z-index:99;overflow:hidden;border-radius:0;border:var(--Border-General);border-left:transparent;border-right:transparent;border-bottom:transparent}.mb-nav-item{display:flex;align-items:center;justify-content:center;flex:25%;padding:1rem 0}.mb-nav-item a,.mb-nav-item i{font-size:1.3em;color:var(--Color-2);z-index:2;transition:.5s ease-in-out}.mb-move-item{position:absolute;left:0;width:auto;height:100%;background-color:var(--Color-2);transition:.5s ease-in-out}.card-text{font-size:var(--Doble-Extra-chica)}}.Posicion-Overflow{overflow-x:hidden;display:grid;place-content:center}
+:root {
+  --Color-1: #2C2D32;
+  --Color-2: #103879;
+  --Color-3: #93bdc3;
+  --Color-4: #F1F2F1;
+  --Titulos: "Poppins", sans-serif;
+  --Subtitulos: "Oswald", sans-serif;
+  --General: "Roboto", sans-serif;
+  --Extra-Grande: 10em;
+  --Grande: 8em;
+  --Mediana: 6em;
+  --Chica: 2em;
+  --Extra-Chica: 1.5em;
+  --Doble-Extra-chica: .5em;
+  --Border-General: var(--Color-2) solid .2em;
+  --Margin-General: 2em;
+  --Pading-General: 2em;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  list-style-type: none;
+}
+
+::-webkit-scrollbar,
+::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-thumb:hover,
+::-webkit-scrollbar-track {
+  display: none;
+}
+
+::-moz-selection {
+  background-color: var(--Color-3);
+}
+
+::selection {
+  background-color: var(--Color-3);
+}
+
+::-moz-selection {
+  background-color: var(--Color-3);
+}
+
+a,
+a:link,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: var(--Color-1);
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: var(--Color-4);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+header {
+  width: 100%;
+  height: 100vh;
+  background-image: url(/Assets/img/Header_Imagen.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  place-content: center;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+header .overlay {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+header .overlay h1 {
+  display: inline-block;
+  position: relative;
+  -webkit-animation: fade 2s ease-in 1 forwards;
+          animation: fade 2s ease-in 1 forwards;
+  font-family: var(--Subtitulos);
+  font-size: var(--Mediana);
+  color: var(--Color-2);
+  font-weight: bolder;
+  overflow-wrap: break-word;
+  text-align: center;
+}
+header .overlay h1:hover {
+  transition: 1s;
+  color: var(--Color-3);
+}
+
+nav {
+  width: 100%;
+  height: auto;
+  background-color: var(--Color-4);
+  border: var(--Border-General);
+  border-left: transparent;
+  border-right: transparent;
+  margin: 0;
+  padding: 0;
+}
+nav img {
+  width: 10%;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+  pointer-events: none;
+  border-radius: 0;
+  border: transparent;
+}
+nav ul {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  border: var(--Color-2) solid 0.1em;
+  border-top: transparent;
+  border-bottom: transparent;
+  text-align: center;
+  padding: 0 2.5em 0 2.5em;
+}
+nav ul li.Nosotros:not(.Tratamientos) {
+  border-right: transparent;
+}
+nav ul li.Tratamientos:not(.Testimonios) {
+  border-right: transparent;
+}
+nav ul li.Testimonios:not(.Contacto) {
+  border-right: transparent;
+}
+nav ul li.Contacto:not(.Testimonios) {
+  border-right: transparent;
+}
+nav ul li.Reconocimientos:not(.Contacto) {
+  border-right: transparent;
+}
+nav ul li a {
+  font-family: var(--Subtitulos);
+  color: var(--Color-2);
+  font-weight: lighter;
+  text-decoration: none;
+  font-size: var(--Extra-Chica);
+}
+@media only screen and (max-width: 37.5em) {
+  nav ul,
+nav li,
+nav button.navbar-toggler,
+nav .collapse {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+section {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  max-width: none;
+  background-color: transparent;
+  overflow-x: hidden;
+}
+section .Nosotros {
+  overflow-x: hidden;
+}
+section .Nosotros_Superior_Izquierdo {
+  background-image: url(/Assets/img/Nosotros_Izquierdo_Imagen.jpg);
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+  border: var(--Border-General);
+  border-top: transparent;
+}
+section .Nosotros_Superior_Derecho {
+  padding: 1em;
+  background-color: var(--Color-2);
+  overflow: hidden;
+}
+section .Nosotros_Superior_Derecho h1 {
+  font-family: var(--Titulos);
+  font-size: var(--Chica);
+  font-weight: bolder;
+  color: var(--Color-4);
+}
+section .Nosotros_Izquierdo {
+  background-color: var(--Color-4);
+  overflow: hidden;
+  border: var(--Border-General);
+  border-top: transparent;
+}
+section .Nosotros_Izquierdo h1 {
+  padding: 0.5em;
+  font-family: var(--Titulos);
+  font-size: var(--Chica);
+  color: var(--Color-2);
+  text-align: left;
+}
+section .Nosotros_Izquierdo h1:hover {
+  transition: 1.5s;
+  text-decoration: underline;
+  color: var(--Color-3);
+}
+section .Nosotros_Izquierdo p {
+  padding: 1em;
+  font-family: var(--General);
+  font-size: var(--Extra-Chica);
+  text-align: left;
+  font-weight: lighter;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+}
+section .Nosotros_Izquierdo p strong {
+  font-family: var(--Titulos);
+  text-decoration: underline;
+  font-weight: bolder;
+  color: var(--Color-2);
+}
+section .Nosotros_Izquierdo p strong:hover {
+  transition: 1s;
+  color: var(--Color-3);
+}
+section .Nosotros_Derecho {
+  overflow: hidden;
+  border: var(--Border-General);
+  border-top: transparent;
+  border-left: transparent;
+  background-image: url(/Assets/img/Nosotros_Imagen.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+section .Servicios {
+  overflow-x: hidden;
+  border-right: transparent;
+}
+section .Servicios_1 {
+  background-color: var(--Color-2);
+  border: var(--Border-General);
+  border-top: transparent;
+}
+section .Servicios_1 h1 {
+  font-family: var(--Titulos);
+  font-size: 3.5em;
+  color: var(--Color-4);
+  font-weight: bolder;
+  padding: 0.2em;
+}
+section .Servicios_2, section .Servicios_3, section .Servicios_4 {
+  background-color: var(--Color-4);
+  border: var(--Border-General);
+  border-top: transparent;
+}
+section .Servicios_2 h1, section .Servicios_3 h1, section .Servicios_4 h1 {
+  font-family: var(--Titulos);
+  font-size: var(--Chica);
+  color: var(--Color-3);
+  font-weight: bolder;
+  padding: 1em;
+  -ms-writing-mode: tb-rl;
+      writing-mode: vertical-rl;
+  transform: rotate(-90deg);
+  text-align: center;
+}
+section .Servicios_2 h1:hover, section .Servicios_3 h1:hover, section .Servicios_4 h1:hover {
+  transition: 1.5s;
+  color: var(--Color-2);
+  text-decoration: underline;
+}
+section .Servicios_2:not(.Servicios_1), section .Servicios_3:not(.Servicios_1), section .Servicios_4:not(.Servicios_1) {
+  border-left: transparent;
+}
+section .Servicios_2:not(.Servicios_2), section .Servicios_3:not(.Servicios_2), section .Servicios_4:not(.Servicios_2) {
+  border-left: transparent;
+}
+section .Servicios_2:not(.Servicios_3), section .Servicios_3:not(.Servicios_3), section .Servicios_4:not(.Servicios_3) {
+  border-left: transparent;
+}
+section .Testimonios {
+  overflow-x: hidden;
+  padding-bottom: 2em;
+}
+section .Testimonios_Izquierdo {
+  padding: 2em;
+  border: var(--Border-General);
+  border-top: transparent;
+}
+section .Testimonios_Izquierdo .card {
+  border-radius: 0;
+}
+section .Testimonios_Izquierdo .card-body {
+  width: 100%;
+  height: 100%;
+  background-color: var(--Color-4);
+  border: var(--Color-1) solid 0.2em;
+}
+section .Testimonios_Izquierdo .card-title {
+  font-family: var(--Titulos);
+  font-size: var(--Extra-Chica);
+  color: var(--Color-3);
+  font-weight: bold;
+  text-align: center;
+}
+section .Testimonios_Izquierdo .card-title:hover {
+  transition: 1s;
+  color: var(--Color-2);
+}
+section .Testimonios_Izquierdo .card-text {
+  font-family: var(--General);
+  color: var(--Color-1);
+  font-size: var(--Extra-Chica);
+  text-align: left;
+}
+section .Testimonios_Izquierdo img {
+  width: 100%;
+  height: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  pointer-events: none;
+  border-radius: 0;
+}
+section .Testimonios_Derecho {
+  background-color: var(--Color-2);
+}
+section .Testimonios_Derecho h1 {
+  font-family: var(--Titulos);
+  font-size: var(--Mediana);
+  color: var(--Color-4);
+  font-weight: bolder;
+  padding: 0.5em;
+  -ms-writing-mode: tb-lr;
+      writing-mode: vertical-lr;
+  transform: rotate(-180deg);
+}
+section .Contacto {
+  overflow-x: hidden;
+}
+section .Contacto_1 {
+  background-color: var(--Color-2);
+}
+section .Contacto_1 h1 {
+  font-family: var(--Titulos);
+  font-size: var(--Chica);
+  color: var(--Color-4);
+  letter-spacing: 0.2em;
+}
+section .Contacto_2, section .Contacto_3, section .Contacto_4 {
+  background-color: var(--Color-4);
+  border: var(--Border-General);
+  padding: 2em;
+}
+section .Contacto_2 a, section .Contacto_3 a, section .Contacto_4 a {
+  font-family: var(--Subtitulos);
+  font-size: var(--Extra-Chica);
+  color: var(--Color-2);
+  text-align: center;
+  text-decoration: none;
+}
+section .Contacto_2 a i, section .Contacto_3 a i, section .Contacto_4 a i {
+  font-size: var(--Chica);
+}
+section .Contacto_2:not(.Contacto_2), section .Contacto_3:not(.Contacto_2), section .Contacto_4:not(.Contacto_2) {
+  border-top: transparent;
+  border-left: transparent;
+}
+section .Contacto_2:not(.Contacto_3), section .Contacto_3:not(.Contacto_3), section .Contacto_4:not(.Contacto_3) {
+  border-top: transparent;
+  border-left: transparent;
+}
+section .Contacto_2:not(.Contacto_4), section .Contacto_3:not(.Contacto_4), section .Contacto_4:not(.Contacto_4) {
+  border-top: transparent;
+  border-left: transparent;
+}
+
+footer {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  place-content: center;
+  background-color: var(--Color-2);
+  overflow-x: hidden;
+}
+footer .Footer {
+  overflow-x: hidden;
+}
+footer .Footer_Inferior {
+  font-family: var(--Subtitulos);
+  font-size: 1em;
+  text-align: center;
+  padding: 1em;
+}
+footer .Footer_Inferior_Link {
+  font-size: 1em;
+  color: var(--Color-4);
+}
+
+.Redes_Sociales {
+  width: calc(100%-66.6%);
+  position: fixed;
+  top: 62.7%;
+  transform: translateY(-50%);
+  right: 0;
+  z-index: 4;
+  background-color: var(--Color-4);
+}
+.Redes_Sociales a {
+  display: block;
+  text-align: center;
+  padding: 0.5em;
+  transition: all 0.3s ease;
+  color: var(--Color-2);
+  font-size: var(--Extra-Chica);
+  display: grid;
+  place-content: center;
+}
+.Redes_Sociales a:hover {
+  color: var(--Color-3);
+}
+.Redes_Sociales a.Redes_Sociales_Programador {
+  font-family: var(--Titulos);
+  font-size: var(--Doble-Extra-chica);
+  -ms-writing-mode: tb-rl;
+      writing-mode: vertical-rl;
+  transform: rotate(-180deg);
+}
+
+.percent {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  background: var(--Color-3);
+  height: 140px;
+  width: 1px;
+  margin: -60px 0 0 40px;
+  z-index: 10;
+}
+.percent .fill {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--Color-4);
+  transition: background 0.15s ease;
+  z-index: 10;
+}
+
+.mb-nav {
+  display: none;
+}
+
+@media screen and (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+@media only screen and (max-width: 37.5rem) {
+  .percent {
+    display: none;
+    visibility: hidden;
+  }
+
+  .Redes_Sociales {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    z-index: 4;
+  }
+
+  .mb-nav {
+    position: fixed;
+    top: 4;
+    bottom: 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--Color-4);
+    z-index: 99;
+    overflow: hidden;
+    border-radius: 0;
+    border: var(--Border-General);
+    border-left: transparent;
+    border-right: transparent;
+    border-bottom: transparent;
+  }
+
+  .mb-nav-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 25%;
+    padding: 1rem 0;
+  }
+
+  .mb-nav-item i,
+.mb-nav-item a {
+    font-size: 1.3em;
+    color: var(--Color-2);
+    z-index: 2;
+    transition: 0.5s ease-in-out;
+  }
+
+  .mb-move-item {
+    position: absolute;
+    left: 0;
+    width: auto;
+    height: 100%;
+    background-color: var(--Color-2);
+    transition: 0.5s ease-in-out;
+  }
+
+  .card-text {
+    font-size: var(--Doble-Extra-chica);
+  }
+}
+.Posicion-Overflow {
+  overflow-x: hidden;
+  display: grid;
+  place-content: center;
+}/*# sourceMappingURL=Estilos.css.map */
